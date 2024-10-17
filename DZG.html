@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>門客推薦</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .beauty-selection {
+            margin-bottom: 30px;
+        }
+
+        .beauty-category {
+            margin-bottom: 20px;
+        }
+
+        .results {
+            margin-top: 20px;
+        }
+
+        .results ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .results li {
+            background-color: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 20px 0;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            button {
+                width: 100%;
+            }
+
+            .results li {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .results li {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>門客推薦</h1>
+    </header>
+
+    <div class="container">
+        <section class="beauty-selection">
+            <div class="beauty-category">
+                <h3>士</h3>
+                <label><input type="checkbox" name="beauty" value="青凝"> 青凝</label>
+                <label><input type="checkbox" name="beauty" value="千仞雪"> 千仞雪</label>
+                <label><input type="checkbox" name="beauty" value="驛使"> 驛使</label>
+                <label><input type="checkbox" name="beauty" value="霓凰郡主"> 霓凰郡主</label>
+                <label><input type="checkbox" name="beauty" value="堇書"> 堇書</label>
+                <label><input type="checkbox" name="beauty" value="醫師"> 醫師</label>
+                <label><input type="checkbox" name="beauty" value="棋士"> 棋士</label>
+                <label><input type="checkbox" name="beauty" value="馬湘蘭"> 馬湘蘭</label>
+                <label><input type="checkbox" name="beauty" value="少將軍"> 少將軍</label>
+                <label><input type="checkbox" name="beauty" value="采詩官"> 采詩官</label>
+                <label><input type="checkbox" name="beauty" value="郡主"> 郡主</label>
+                <label><input type="checkbox" name="beauty" value="尼姑"> 尼姑</label>
+                <label><input type="checkbox" name="beauty" value="精衛"> 精衛</label>
+                <label><input type="checkbox" name="beauty" value="比比東"> 比比東</label>
+                <label><input type="checkbox" name="beauty" value="塗山紅紅"> 塗山紅紅</label>
+                <label><input type="checkbox" name="beauty" value="伽羅奢"> 伽羅奢</label>
+                <label><input type="checkbox" name="beauty" value="小鹿女"> 小鹿女</label>
+                <label><input type="checkbox" name="beauty" value="花魁"> 花魁</label>
+            </div>
+
+            <div class="beauty-category">
+                <h3>農</h3>
+                <label><input type="checkbox" name="beauty" value="極夜"> 極夜</label>
+                <label><input type="checkbox" name="beauty" value="丫鬟"> 丫鬟</label>
+                <label><input type="checkbox" name="beauty" value="馴馬師"> 馴馬師</label>
+                <label><input type="checkbox" name="beauty" value="苗疆聖女"> 苗疆聖女</label>
+                <label><input type="checkbox" name="beauty" value="李香君"> 李香君</label>
+                <label><input type="checkbox" name="beauty" value="小乞丐"> 小乞丐</label>
+                <label><input type="checkbox" name="beauty" value="乳娘"> 乳娘</label>
+                <label><input type="checkbox" name="beauty" value="牛郎"> 牛郎</label>
+                <label><input type="checkbox" name="beauty" value="女媧"> 女媧</label>
+                <label><input type="checkbox" name="beauty" value="王后婦好"> 王后婦好</label>
+                <label><input type="checkbox" name="beauty" value="雲織"> 雲織</label>
+                <label><input type="checkbox" name="beauty" value="隱娘"> 隱娘</label>
+                <label><input type="checkbox" name="beauty" value="沈眉莊"> 沈眉莊</label>
+                <label><input type="checkbox" name="beauty" value="花無缺"> 花無缺</label>
+                <label><input type="checkbox" name="beauty" value="紫玉"> 紫玉</label>
+                <label><input type="checkbox" name="beauty" value="舞姬"> 舞姬</label>
+                <label><input type="checkbox" name="beauty" value="西湖船孃"> 西湖船孃</label>
+                <label><input type="checkbox" name="beauty" value="古國公主"> 古國公主</label>
+            </div>
+
+            <div class="beauty-category">
+                <h3>工</h3>
+                <label><input type="checkbox" name="beauty" value="靈夜貓女"> 靈夜貓女</label>
+                <label><input type="checkbox" name="beauty" value="捉鬼師"> 捉鬼師</label>
+                <label><input type="checkbox" name="beauty" value="手工少女"> 手工少女</label>
+                <label><input type="checkbox" name="beauty" value="董小宛"> 董小宛</label>
+                <label><input type="checkbox" name="beauty" value="玩具職人"> 玩具職人</label>
+                <label><input type="checkbox" name="beauty" value="玉兔"> 玉兔</label>
+                <label><input type="checkbox" name="beauty" value="花藝師"> 花藝師</label>
+                <label><input type="checkbox" name="beauty" value="元宵姑娘"> 元宵姑娘</label>
+                <label><input type="checkbox" name="beauty" value="西王母"> 西王母</label>
+                <label><input type="checkbox" name="beauty" value="女魃"> 女魃</label>
+                <label><input type="checkbox" name="beauty" value="塗山氏"> 塗山氏</label>
+                <label><input type="checkbox" name="beauty" value="徽茵"> 徽茵</label>
+                <label><input type="checkbox" name="beauty" value="凝音"> 凝音</label>
+                <label><input type="checkbox" name="beauty" value="蘿"> 蘿</label>
+                <label><input type="checkbox" name="beauty" value="織女"> 織女</label>
+                <label><input type="checkbox" name="beauty" value="花郎"> 花郎</label>
+                <label><input type="checkbox" name="beauty" value="小木匠"> 小木匠</label>
+                <label><input type="checkbox" name="beauty" value="新娘之妹"> 新娘之妹</label>
+            </div>
+
+            <div class="beauty-category">
+                <h3>商</h3>
+                <label><input type="checkbox" name="beauty" value="南宮婉"> 南宮婉</label>
+                <label><input type="checkbox" name="beauty" value="卞玉京"> 卞玉京</label>
+                <label><input type="checkbox" name="beauty" value="馴鷹少女"> 馴鷹少女</label>
+                <label><input type="checkbox" name="beauty" value="新娘"> 新娘</label>
+                <label><input type="checkbox" name="beauty" value="糖蘋果"> 糖蘋果</label>
+                <label><input type="checkbox" name="beauty" value="墨璃"> 墨璃</label>
+                <label><input type="checkbox" name="beauty" value="檳榔女"> 檳榔女</label>
+                <label><input type="checkbox" name="beauty" value="西域女子"> 西域女子</label>
+                <label><input type="checkbox" name="beauty" value="戲子"> 戲子</label>
+                <label><input type="checkbox" name="beauty" value="甄嬛"> 甄嬛</label>
+                <label><input type="checkbox" name="beauty" value="秋螢"> 秋螢</label>
+                <label><input type="checkbox" name="beauty" value="荒野鈴蘭"> 荒野鈴蘭</label>
+                <label><input type="checkbox" name="beauty" value="織田市"> 織田市</label>
+                <label><input type="checkbox" name="beauty" value="小蝴蝶"> 小蝴蝶</label>
+                <label><input type="checkbox" name="beauty" value="狐妖掌櫃"> 狐妖掌櫃</label>
+            </div>
+
+            <div class="beauty-category">
+                <h3>俠</h3>
+                <label><input type="checkbox" name="beauty" value="小師妹"> 小師妹</label>
+                <label><input type="checkbox" name="beauty" value="小舞"> 小舞</label>
+                <label><input type="checkbox" name="beauty" value="薩滿"> 薩滿</label>
+                <label><input type="checkbox" name="beauty" value="將門女子"> 將門女子</label>
+                <label><input type="checkbox" name="beauty" value="草原女孩"> 草原女孩</label>
+                <label><input type="checkbox" name="beauty" value="吳邪"> 吳邪</label>
+                <label><input type="checkbox" name="beauty" value="捕快"> 捕快</label>
+                <label><input type="checkbox" name="beauty" value="市舶使"> 市舶使</label>
+                <label><input type="checkbox" name="beauty" value="浪子"> 浪子</label>
+                <label><input type="checkbox" name="beauty" value="密探"> 密探</label>
+                <label><input type="checkbox" name="beauty" value="寇白門"> 寇白門</label>
+                <label><input type="checkbox" name="beauty" value="嫦娥"> 嫦娥</label>
+                <label><input type="checkbox" name="beauty" value="器靈"> 器靈</label>
+                <label><input type="checkbox" name="beauty" value="邀影"> 邀影</label>
+                <label><input type="checkbox" name="beauty" value="漁歌"> 漁歌</label>
+                <label><input type="checkbox" name="beauty" value="巫女"> 巫女</label>
+            </div>
+        </section>
+
+        <button onclick="calculateRetainers()">計算門客</button>
+
+        <section class="results">
+            <h2>推薦結果：</h2>
+            <ul id="retainerList"></ul>
+        </section>
+    </div>
+
+    <script>
+        const data = {
+            '士': [
+                { retainer: '韓立', beauties: ['南宮婉', '靈夜貓女', '捉鬼師', '極夜', '青凝'] },
+                { retainer: '馬湘蘭', beauties: ['馬湘蘭', '馴馬師', '巫女', '花無缺', '玉兔', '徽茵'] },
+                { retainer: '白月初', beauties: ['塗山紅紅', '馴鷹少女', '董小宛', '凝音', '徽茵'] },
+                { retainer: '高漸離', beauties: ['花藝師', '采詩官', '捉鬼師', '甄嬛', '隱娘'] },
+                { retainer: '解魯', beauties: ['浪子', '馴馬師', '伽羅奢', '極夜', '甄嬛', '雲織'] },
+                { retainer: '宋徽宗', beauties: ['寇白門', '檳榔女', '小木匠', '南宮婉'] },
+                { retainer: '吳道子', beauties: ['郡主', '王后婦好', '西湖船孃', '堇書', '青凝'] },
+                { retainer: '蔡京', beauties: ['馬湘蘭', '董小宛', '青凝', '徽茵'] },
+                { retainer: '嚴先生', beauties: ['將門女子', '驛使', '巫女', '秋螢'] },
+                { retainer: '冷二皮', beauties: ['醫師', '新娘', '織女', '花無缺'] },
+                { retainer: '秦始皇', beauties: ['新娘', '董小宛', '荒野鈴蘭', '秋螢'] },
+                { retainer: '伏羲', beauties: ['塗山氏', '精衛', '嫦娥', '荒野鈴蘭'] },
+                { retainer: '豐臣秀吉', beauties: ['花郎', '花魁', '玩具職人', '織田市'] },
+                { retainer: '活閻王', beauties: ['卞玉京', '新娘之妹', '捉鬼師'] }
+            ],
+            '農': [
+                { retainer: '唐三', beauties: ['苗疆聖女', '李香君', '小舞', '漁歌', '千仞雪', '比比東'] },
+                { retainer: '小舞', beauties: ['苗疆聖女', '李香君', '小舞', '漁歌', '千仞雪', '比比東'] },
+                { retainer: '李香君', beauties: ['李香君', '采詩官', '小舞', '市舶使', '沈眉莊'] },
+                { retainer: '蘇武', beauties: ['草原女孩', '靈夜貓女', '荒野鈴蘭'] },
+                { retainer: '馮蜜兒', beauties: ['元宵姑娘', '苗疆聖女', '牛郎', '蘿'] },
+                { retainer: '孫臏', beauties: ['馴鷹少女', '古國公主', '小蝴蝶', '吳邪'] },
+                { retainer: '孫武', beauties: ['漁歌', '秋螢', '古國公主', '徽茵'] },
+                { retainer: '敖武', beauties: ['吳邪', '小蝴蝶', '糖蘋果', '織女'] },
+                { retainer: '東皇太一', beauties: ['女媧', '女魃', '嫦娥', '西王母'] },
+                { retainer: '雷恩', beauties: ['靈夜貓女', '新娘之妹', '吳邪', '沈眉莊'] },
+                { retainer: '祭師婦好', beauties: ['苗疆聖女', '董小宛', '王后婦好', '塗山氏'] },
+                { retainer: '宋江', beauties: ['李香君', '采詩官'] },
+                { retainer: '牙九', beauties: ['尼姑', '捕快', '王后婦好', '千仞雪'] }
+            ],
+            '工': [
+                { retainer: '董小宛', beauties: ['董小宛', '糖蘋果', '捉鬼師', '南宮婉', '墨璃'] },
+                { retainer: '羅裁縫', beauties: ['元宵姑娘', '小師妹', '小木匠', '紫玉'] },
+                { retainer: '張起靈', beauties: ['吳邪', '小師妹', '新娘之妹', '墨璃', '隱娘'] },
+                { retainer: '魯班', beauties: ['花藝師', '新娘之妹', '紫玉', '蘿', '青凝'] },
+                { retainer: '畢昇', beauties: ['郡主', '狐妖掌櫃', '玩具職人', '霓凰郡主', '比比東'] },
+                { retainer: '向恩', beauties: ['花藝師', '牛郎', '伽羅奢', '玉兔', '塗山紅紅'] },
+                { retainer: '李神手', beauties: ['棋士', '少將軍', '織女', '邀影', '沈眉莊'] },
+                { retainer: '小魚兒', beauties: ['馬湘蘭', '采詩官', '花無缺', '秋螢', '雲織'] },
+                { retainer: '敦煌匠神', beauties: ['驛使', '狐妖掌櫃', '小鹿女', '器靈'] },
+                { retainer: '四郎', beauties: ['花無缺', '蘿', '花郎', '比比東'] },
+                { retainer: '大禹', beauties: ['馴鷹少女', '王后婦好', '塗山氏', '精衛'] },
+                { retainer: '昊天上帝', beauties: ['西王母', '女媧', '女魃'] },
+                { retainer: '德川家康', beauties: ['織田市', '伽羅奢'] },
+                { retainer: '石敢當', beauties: ['李香君', '馴馬師', '手工少女', '塗山紅紅'] }
+            ],
+            '商': [
+                { retainer: '卞玉京', beauties: ['卞玉京', '花魁', '紫玉', '極夜', '塗山紅紅', '雲織'] },
+                { retainer: '哪吒', beauties: ['花藝師', '巫女', '小鹿女', '墨璃'] },
+                { retainer: '屠夫', beauties: ['浪子', '檳榔女', '苗疆聖女', '西湖船孃', '千仞雪'] },
+                { retainer: '甄嬛', beauties: ['沈眉莊', '新娘', '甄嬛', '苗疆聖女', '隱娘'] },
+                { retainer: '沈萬三', beauties: ['薩滿', '檳榔女', '古國公主', '小蝴蝶', '凝音'] },
+                { retainer: '葫蘆仙人', beauties: ['小師妹', '小蝴蝶', '堇書', '市舶使', '邀影'] },
+                { retainer: '宗澤', beauties: ['馴鷹少女', '糖蘋果', '手工少女', '漁歌', '凝音'] },
+                { retainer: '丁戲人', beauties: ['西域女子', '新娘', '花郎', '小鹿女', '邀影'] },
+                { retainer: '杜康', beauties: ['乳娘', '狐妖掌櫃', '舞姬', '霓凰郡主'] },
+                { retainer: '后羿', beauties: ['嫦娥', '精衛', '紫玉', '女魃'] },
+                { retainer: '周瑜', beauties: ['捕快', '織女', '邀影'] }
+            ],
+            '俠': [
+                { retainer: '梅長蘇', beauties: ['霓凰郡主', '手工少女', '驛使', '玉兔', '比比東'] },
+                { retainer: '歐冶子', beauties: ['醫師', '靈夜貓女', '玩具職人', '手工少女'] },
+                { retainer: '盜聖', beauties: ['小乞丐', '驛使', '花郎', '墨璃'] },
+                { retainer: '寇白門', beauties: ['密探', '寇白門', '舞姬', '堇書', '霓凰郡主'] },
+                { retainer: '張三豐', beauties: ['捕快', '花魁', '小舞', '千仞雪', '器靈'] },
+                { retainer: '方火頭', beauties: ['小乞丐', '新娘', '牛郎', '荒野鈴蘭'] },
+                { retainer: '蘭飛鴻', beauties: ['馴鷹少女', '糖蘋果', '古國公主', '蘿', '器靈', '雲織'] },
+                { retainer: '武石仁', beauties: ['戲子', '小鹿女'] },
+                { retainer: '呂布', beauties: ['馴馬師', '新娘之妹', '小木匠', '市舶使'] },
+                { retainer: '秦瓊尉遲恭', beauties: ['器靈', '市舶使', '堇書', '玉兔'] },
+                { retainer: '蚩尤', beauties: ['精衛', '嫦娥', '女魃', '女媧'] },
+                { retainer: '滾海蛟', beauties: ['捕快', '卞玉京', '織田市'] },
+                { retainer: '織田信長', beauties: ['檳榔女', '巫女', '舞姬', '織田市'] }
+            ]
+        };
+
+        function calculateRetainers() {
+            const selectedBeauties = Array.from(document.querySelectorAll('input[name="beauty"]:checked')).map(cb => cb.value);
+            const retainerList = document.getElementById('retainerList');
+            retainerList.innerHTML = ''; // 清空舊的結果
+
+            const retainerScores = {};
+
+            // 計算每個門客與選擇美女的相關性
+            for (const category in data) {
+                data[category].forEach(retainer => {
+                    let score = 0;
+                    retainer.beauties.forEach(beauty => {
+                        if (selectedBeauties.includes(beauty)) {
+                            score++;
+                        }
+                    });
+
+                    if (score > 0) {
+                        retainerScores[retainer.retainer] = score;
+                    }
+                });
+            }
+
+            // 排序門客，根據匹配的美女數量
+            const sortedRetainers = Object.entries(retainerScores).sort((a, b) => b[1] - a[1]);
+
+            // 顯示結果
+            sortedRetainers.forEach(([retainer, score]) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${retainer} (匹配 ${score} 位美女)`;
+                retainerList.appendChild(listItem);
+            });
+
+            if (sortedRetainers.length === 0) {
+                retainerList.innerHTML = '<li>未找到匹配的門客。</li>';
+            }
+        }
+    </script>
+</body>
+</html>
